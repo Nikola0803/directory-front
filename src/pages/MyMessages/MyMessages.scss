@@ -1,0 +1,196 @@
+.my-messages {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(1, auto) 1fr;
+  background-color: #eeeeee;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    background-color: #fff;
+
+    border-radius: 10px;
+    &__top {
+      display: flex;
+      border-bottom: 2px solid #eeeeee;
+
+      &__left {
+        width: 20%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+        svg {
+          path {
+            color: var(--main-color);
+          }
+        }
+        h3 {
+          margin: 0;
+          margin-left: 25%;
+        }
+      }
+      &__right {
+        border-left: 2px solid #eeeeee;
+        width: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        h3 {
+          margin: 0;
+        }
+      }
+    }
+    &__wrapper {
+      display: flex;
+
+      &__side {
+        width: 20%;
+        // margin-bottom: 400px;
+        overflow-y: auto;
+        max-height: 700px;
+
+        &::-webkit-scrollbar-track {
+          border: 1px solid #cccccc;
+          padding: 2px 0;
+          background-color: #cccccc;
+        }
+
+        &::-webkit-scrollbar {
+          width: 3px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+          border-radius: 10px;
+          box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+          background-color: rgb(207, 207, 207);
+          border: 1px solid rgb(170, 170, 170);
+        }
+
+        &__user-chat {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          transition: 0.2s ease-in-out;
+          cursor: pointer;
+          padding: 15px 15px;
+          &:hover {
+            background-color: #eeeeee75;
+          }
+          &:first-child {
+            margin-top: 0;
+          }
+          span {
+            font-weight: bold;
+          }
+          p {
+            margin: 0;
+          }
+        }
+        &__user-chat--active {
+          background-color: #eeeeee;
+          &:hover {
+            background-color: #eeeeee;
+          }
+        }
+      }
+
+      &__chat {
+        width: 80%;
+
+        border-left: 2px solid #eeeeee;
+        &__messages {
+          padding: 25px 15px;
+          display: flex;
+          flex-direction: column;
+          overflow-y: auto;
+          max-height: 700px;
+
+          &::-webkit-scrollbar-track {
+            border: 1px solid #cccccc;
+            padding: 2px 0;
+            background-color: #cccccc;
+          }
+
+          &::-webkit-scrollbar {
+            width: 3px;
+          }
+
+          &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            background-color: rgb(207, 207, 207);
+            border: 1px solid rgb(170, 170, 170);
+          }
+          &__my-message {
+            border-radius: 30px;
+            padding: 7px 15px;
+            display: inline-block;
+            background-color: var(--main-color);
+            margin: 0;
+            align-self: flex-end; /* Your message on the right */
+            color: #fff;
+            position: relative;
+            margin: 5px;
+            span {
+              margin-top: -30px;
+              margin-left: 5px;
+              position: absolute;
+              color: var(--main-color);
+            }
+          }
+
+          &__his-message {
+            background-color: #eeeeee;
+            border-radius: 30px;
+            padding: 7px 15px;
+            display: inline-block;
+            margin: 0;
+            align-self: flex-start; /* His message on the left */
+            color: black;
+            position: relative;
+            margin: 7px;
+            span {
+              margin-top: -30px;
+              margin-left: 5px;
+              position: absolute;
+              color: rgb(173, 173, 173);
+            }
+          }
+        }
+      }
+    }
+    &__bottom {
+      display: flex;
+      border-top: 2px solid #eeeeee;
+      &__left {
+        width: 20%;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h3 {
+          margin: 0;
+        }
+      }
+      &__chat-input {
+        width: 80%;
+        border-left: 2px solid #eeeeee;
+        padding: 10px;
+        display: flex;
+
+        align-items: center;
+        input {
+          border: none;
+          outline: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

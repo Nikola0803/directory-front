@@ -1,0 +1,119 @@
+.my-bids {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(1, auto) 1fr;
+  background-color: #eeeeee;
+  &__wrapper {
+    border-radius: 15px;
+    margin: 25px;
+    background-color: #fff;
+    padding: 40px 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+
+    &__top {
+      h3 {
+        font-size: 30px;
+        font-weight: bold;
+      }
+    }
+    &__item-holder {
+      padding: 15px 0;
+      &__item {
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        transition: 0.2s ease-in-out;
+        padding: 15px;
+        border-radius: 15px;
+        background-color: #eeeeee;
+        &:hover {
+          background-color: #e2e2e2;
+        }
+        &__left {
+          display: flex;
+          img {
+            width: 350px;
+            border-radius: 5px;
+            cursor: pointer;
+            height: 200px !important;
+            object-fit: cover !important;
+            margin-right: 15px;
+          }
+
+          &__info {
+            display: flex;
+            flex-direction: column;
+            span {
+              display: flex;
+              margin: 0;
+              align-items: center;
+              p {
+                margin: 0;
+                font-size: 20px;
+                font-weight: bold;
+                margin-left: 15px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                h5 {
+                  font-size: 18px;
+                  margin: 0;
+                  margin-right: 5px;
+                  display: inline-block;
+                }
+              }
+            }
+          }
+        }
+        &__status {
+          display: flex;
+          align-items: center;
+          p {
+            margin: 0;
+            margin-right: 10px;
+          }
+          h3 {
+            margin: 0;
+            padding: 7px 10px;
+            font-weight: bold;
+            font-size: 17px;
+          }
+          &__accepted {
+            background-color: green;
+            color: white;
+          }
+          &__declined {
+            background-color: red;
+            color: white;
+          }
+          &__pending {
+            background-color: gray;
+            color: white;
+          }
+        }
+        &__buttons {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .bid-accepted {
+            color: green;
+            text-decoration: underline;
+          }
+          .bid-declined {
+            color: red;
+            text-decoration: underline;
+          }
+          &__accept {
+            background-color: rgb(35, 141, 35);
+            margin-right: 20px;
+          }
+          &__decline {
+            background-color: rgb(160, 36, 36);
+          }
+        }
+      }
+    }
+  }
+}

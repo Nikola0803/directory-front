@@ -1,0 +1,40 @@
+.mini-footer {
+  background-color: #fff;
+  padding: 10px 20px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  margin: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  span {
+    font-size: 14px;
+    font-weight: 400;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    img {
+      width: 115px;
+    }
+    ul {
+      display: flex;
+      align-items: center;
+      margin-left: 40px;
+      list-style: none;
+      li {
+        margin-right: 25px;
+        a {
+          font-size: 14px;
+          font-weight: 400;
+          color: rgba(34, 34, 34, 1);
+        }
+      }
+    }
+  }
+}

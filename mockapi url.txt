@@ -1,0 +1,3 @@
+https://64f0d1968a8b66ecf77a270e.mockapi.io/articles
+
+get all articles

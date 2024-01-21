@@ -1,0 +1,52 @@
+.update-property {
+  width: 100%;
+  display: grid;
+  grid-template-rows: repeat(1, auto) 1fr;
+  background-color: #eeeeee;
+  &__wrapper {
+    border-radius: 15px;
+    margin: 25px;
+    background-color: #fff;
+    padding: 40px 80px;
+    position: relative;
+
+    &__top {
+      h3 {
+        font-size: 30px;
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+    }
+    &__form {
+      background-color: #eeeeee;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      margin: 0 auto;
+      border: 1px solid rgb(219, 219, 219);
+
+      input,
+      select {
+        background-color: rgba(248, 250, 252, 1);
+        padding: 20px 10px;
+        color: rgba(125, 125, 125, 1);
+        border: 1px solid rgba(189, 189, 189, 1);
+        outline: none;
+        font-size: 13px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+      }
+      button {
+        &:disabled {
+          cursor: not-allowed;
+          text-align: center;
+        }
+      }
+    }
+  }
+}

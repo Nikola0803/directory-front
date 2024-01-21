@@ -1,0 +1,46 @@
+
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+                                     
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+}
+
+:root {
+  --main-color: #9ECC8A;
+  --secondary-color: #2686F6;
+  --third-color: rgb(224, 224, 17);
+
+}
+
+* {
+  margin: 0;
+  padding: 0;
+     
+  
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+button {
+  background-color: var(--main-color);
+  color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 34px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 5px;
+}
+body {
+  overflow-x: hidden !important;
+}

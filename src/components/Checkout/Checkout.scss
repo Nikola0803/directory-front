@@ -1,0 +1,162 @@
+.basic-multi-select {
+  margin-bottom: 20px;
+}
+
+.checkout {
+  background-color: #f1f1f1;
+  width: 100%;
+  height: 100vh;
+  font-family: "Raleway", sans-serif;
+
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  &__back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+  }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    padding: 40px;
+    background-color: #fff;
+    padding: 30px;
+
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    color: rgba(34, 34, 34, 1);
+    width: 45%;
+
+    img {
+      width: 120px;
+      margin: 0 auto;
+    }
+    h3 {
+      font-size: 24px;
+      font-weight: 700;
+      margin-top: 40px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 15px;
+      color: rgba(125, 125, 125, 1);
+      margin-bottom: 25px;
+    }
+    &__form {
+      button {
+        background-color: var(--secondary-color);
+      }
+      p {
+        color: rgba(34, 34, 34, 1);
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 20px;
+      }
+
+      input,
+      select {
+        background-color: rgba(248, 250, 252, 1);
+        padding: 20px 10px;
+        color: rgba(125, 125, 125, 1);
+        border: 1px solid rgba(189, 189, 189, 1);
+        outline: none;
+        font-size: 13px;
+        margin-bottom: 15px;
+        border-radius: 10px;
+        width: 100%;
+        position: relative;
+      }
+      &__half {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        input,
+        select {
+          width: 48%;
+        }
+      }
+      &__password {
+        position: relative;
+        input {
+          margin-bottom: 0px;
+        }
+        &__icons {
+          position: absolute;
+          top: 20px;
+          right: 10px;
+        }
+      }
+      &__checkbox {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        align-items: center;
+        /* Hide the default checkbox */
+        input[type="checkbox"] {
+          display: none;
+        }
+
+        /* Style the label as a custom checkbox */
+        label {
+          position: relative;
+          display: inline-block;
+          width: 23px;
+          height: 23px;
+          background-color: white; /* Default background color */
+          border: 2px solid #000; /* Default border color */
+          cursor: pointer;
+        }
+
+        /* Style the pseudo-element (checkmark) */
+        label::after {
+          content: "\2713"; /* Checkmark symbol */
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          color: #000; /* Default checkmark color */
+          display: none;
+        }
+
+        /* Change styles when the checkbox is checked */
+        input[type="checkbox"]:checked + label {
+          background-color: #000; /* Black background when checked */
+          border-color: #fff; /* White border when checked */
+        }
+
+        /* Change checkmark color when the checkbox is checked */
+        input[type="checkbox"]:checked + label::after {
+          color: #fff; /* White checkmark when checked */
+          display: block;
+        }
+        span {
+          margin-left: 15px;
+          font-size: 14px;
+          font-weight: 500;
+          color: rgba(18, 25, 38, 1);
+        }
+      }
+      div {
+        button {
+          width: 100%;
+          margin-bottom: 15px;
+          font-weight: 600;
+        }
+      }
+    }
+    &__have {
+      border-top: 1px solid rgba(227, 232, 239, 1);
+      padding-top: 10px;
+      a {
+        font-size: 14px;
+        color: rgba(18, 25, 38, 1);
+        font-weight: 400;
+      }
+    }
+  }
+}
